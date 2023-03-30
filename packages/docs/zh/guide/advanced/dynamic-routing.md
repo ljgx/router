@@ -24,6 +24,7 @@ const router = createRouter({
 
 ```js
 router.addRoute({ path: '/about', component: About })
+<!-- 如果你第一次访问的路由和你添加的路由一次,会立即跳转到新添加的路由页面 -->
 ```
 
 页面仍然会显示 `Article` 组件，我们需要手动调用 `router.replace()` 来改变当前的位置，并覆盖我们原来的位置（而不是添加一个新的路由，最后在我们的历史中两次出现在同一个位置）：
